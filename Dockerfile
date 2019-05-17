@@ -1,4 +1,4 @@
 FROM docker:18.09
 
-RUN apt-get update -y \
-    && apt-get install -y ssh
+RUN apk --update add --no-cache openssh bash \
+  && rm -rf /var/cache/apk/*
